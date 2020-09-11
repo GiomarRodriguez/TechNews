@@ -25,6 +25,16 @@
 		2237C648250AF483009FCC58 /* DefaultArticleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2237C647250AF483009FCC58 /* DefaultArticleRepository.swift */; };
 		2237C64B250B00AA009FCC58 /* GetArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2237C64A250B00AA009FCC58 /* GetArticles.swift */; };
 		2237C64E250B0C7E009FCC58 /* BaseContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2237C64D250B0C7E009FCC58 /* BaseContract.swift */; };
+		224B039F250B684B006CB0C5 /* GetArticlesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B039E250B684B006CB0C5 /* GetArticlesSpec.swift */; };
+		224B03A2250B6F66006CB0C5 /* ArticleRemoteDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B03A1250B6F66006CB0C5 /* ArticleRemoteDataSourceMock.swift */; };
+		224B03A4250B6F85006CB0C5 /* ArticleLocalDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B03A3250B6F85006CB0C5 /* ArticleLocalDataSourceMock.swift */; };
+		224B03A6250B6FBF006CB0C5 /* ArticleRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B03A5250B6FBF006CB0C5 /* ArticleRepositoryMock.swift */; };
+		224B03A8250B80C3006CB0C5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B03A7250B80C3006CB0C5 /* Result.swift */; };
+		224B03AA250B8662006CB0C5 /* DeleteArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B03A9250B8662006CB0C5 /* DeleteArticle.swift */; };
+		224B03AC250B9454006CB0C5 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B03AB250B9454006CB0C5 /* ArticleModel.swift */; };
+		224B03AE250BA877006CB0C5 /* Movable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B03AD250BA877006CB0C5 /* Movable.swift */; };
+		224B03B0250BB171006CB0C5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B03AF250BB171006CB0C5 /* Configuration.swift */; };
+		224B03B2250BB252006CB0C5 /* TechNewsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B03B1250BB252006CB0C5 /* TechNewsConfiguration.swift */; };
 		2250A8A32509E16A00A3450A /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2250A8A22509E16A00A3450A /* ArticleTableViewCell.swift */; };
 		2250A8A9250A0A5B00A3450A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2250A8A8250A0A5B00A3450A /* Article.swift */; };
 		2250A8AB250A0EAA00A3450A /* ArticleRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2250A8AA250A0EAA00A3450A /* ArticleRemoteDataSource.swift */; };
@@ -68,6 +78,16 @@
 		2237C647250AF483009FCC58 /* DefaultArticleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultArticleRepository.swift; sourceTree = "<group>"; };
 		2237C64A250B00AA009FCC58 /* GetArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArticles.swift; sourceTree = "<group>"; };
 		2237C64D250B0C7E009FCC58 /* BaseContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContract.swift; sourceTree = "<group>"; };
+		224B039E250B684B006CB0C5 /* GetArticlesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArticlesSpec.swift; sourceTree = "<group>"; };
+		224B03A1250B6F66006CB0C5 /* ArticleRemoteDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRemoteDataSourceMock.swift; sourceTree = "<group>"; };
+		224B03A3250B6F85006CB0C5 /* ArticleLocalDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleLocalDataSourceMock.swift; sourceTree = "<group>"; };
+		224B03A5250B6FBF006CB0C5 /* ArticleRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRepositoryMock.swift; sourceTree = "<group>"; };
+		224B03A7250B80C3006CB0C5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		224B03A9250B8662006CB0C5 /* DeleteArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteArticle.swift; sourceTree = "<group>"; };
+		224B03AB250B9454006CB0C5 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		224B03AD250BA877006CB0C5 /* Movable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movable.swift; sourceTree = "<group>"; };
+		224B03AF250BB171006CB0C5 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		224B03B1250BB252006CB0C5 /* TechNewsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechNewsConfiguration.swift; sourceTree = "<group>"; };
 		2250A8A22509E16A00A3450A /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		2250A8A8250A0A5B00A3450A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		2250A8AA250A0EAA00A3450A /* ArticleRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRemoteDataSource.swift; sourceTree = "<group>"; };
@@ -129,6 +149,7 @@
 				2236696525092E4300030185 /* Articles */,
 				2237C62F250AB71A009FCC58 /* Renderable.swift */,
 				2237C637250AD198009FCC58 /* Reducible.swift */,
+				224B03AD250BA877006CB0C5 /* Movable.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -141,6 +162,7 @@
 				2237C635250AC771009FCC58 /* ArticleViewController.swift */,
 				2236696625092E9C00030185 /* ArticlesViewController.swift */,
 				2250A8A22509E16A00A3450A /* ArticleTableViewCell.swift */,
+				224B03AB250B9454006CB0C5 /* ArticleModel.swift */,
 			);
 			path = Articles;
 			sourceTree = "<group>";
@@ -200,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				2237C64A250B00AA009FCC58 /* GetArticles.swift */,
+				224B03A9250B8662006CB0C5 /* DeleteArticle.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -210,6 +233,24 @@
 				2237C64D250B0C7E009FCC58 /* BaseContract.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		224B039D250B67F0006CB0C5 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				224B039E250B684B006CB0C5 /* GetArticlesSpec.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		224B03A0250B6F49006CB0C5 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				224B03A1250B6F66006CB0C5 /* ArticleRemoteDataSourceMock.swift */,
+				224B03A3250B6F85006CB0C5 /* ArticleLocalDataSourceMock.swift */,
+				224B03A5250B6FBF006CB0C5 /* ArticleRepositoryMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		2250A8A4250A085200A3450A /* DI */ = {
@@ -224,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				2250A8A8250A0A5B00A3450A /* Article.swift */,
+				224B03A7250B80C3006CB0C5 /* Result.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -234,6 +276,7 @@
 				2237C643250AF41E009FCC58 /* Repositories */,
 				2250A8AA250A0EAA00A3450A /* ArticleRemoteDataSource.swift */,
 				22370B99250B37B500D5E296 /* ArticleLocalDataSource.swift */,
+				224B03AF250BB171006CB0C5 /* Configuration.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -244,6 +287,7 @@
 				2237C646250AF468009FCC58 /* Repositories */,
 				2250A8AC250A10F600A3450A /* URLSessionArticleDataSource.swift */,
 				22370BA1250B50B600D5E296 /* UserDefaultArticleDataSource.swift */,
+				224B03B1250BB252006CB0C5 /* TechNewsConfiguration.swift */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -291,6 +335,8 @@
 		22E199532507D6B3001CC15A /* TechNewsTests */ = {
 			isa = PBXGroup;
 			children = (
+				224B03A0250B6F49006CB0C5 /* Mock */,
+				224B039D250B67F0006CB0C5 /* UseCase */,
 				22E199542507D6B3001CC15A /* TechNewsTests.swift */,
 				22E199562507D6B3001CC15A /* Info.plist */,
 			);
@@ -498,17 +544,23 @@
 				2237C642250AF10F009FCC58 /* DefaultArticlesPresenter.swift in Sources */,
 				2237C633250ABB16009FCC58 /* UITableViewExtension.swift in Sources */,
 				2250A8AD250A10F600A3450A /* URLSessionArticleDataSource.swift in Sources */,
+				224B03A8250B80C3006CB0C5 /* Result.swift in Sources */,
+				224B03AA250B8662006CB0C5 /* DeleteArticle.swift in Sources */,
 				2250A8A9250A0A5B00A3450A /* Article.swift in Sources */,
 				2237C63C250AE2A7009FCC58 /* Inject.swift in Sources */,
+				224B03B0250BB171006CB0C5 /* Configuration.swift in Sources */,
 				2237C630250AB71A009FCC58 /* Renderable.swift in Sources */,
 				22370BA0250B43AE00D5E296 /* DefaultArticlePresenter.swift in Sources */,
 				2237C638250AD198009FCC58 /* Reducible.swift in Sources */,
 				2237C63F250AE613009FCC58 /* ArticlesContract.swift in Sources */,
+				224B03AE250BA877006CB0C5 /* Movable.swift in Sources */,
 				22370B9E250B433800D5E296 /* ArticleContract.swift in Sources */,
 				22370B9C250B3C4600D5E296 /* ArticleFactory.swift in Sources */,
 				2237C64E250B0C7E009FCC58 /* BaseContract.swift in Sources */,
 				2237C636250AC771009FCC58 /* ArticleViewController.swift in Sources */,
 				2237C645250AF459009FCC58 /* ArticleRepository.swift in Sources */,
+				224B03B2250BB252006CB0C5 /* TechNewsConfiguration.swift in Sources */,
+				224B03AC250B9454006CB0C5 /* ArticleModel.swift in Sources */,
 				2237C648250AF483009FCC58 /* DefaultArticleRepository.swift in Sources */,
 				2250A8AB250A0EAA00A3450A /* ArticleRemoteDataSource.swift in Sources */,
 				22E199422507D6B2001CC15A /* ViewController.swift in Sources */,
@@ -523,6 +575,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224B03A2250B6F66006CB0C5 /* ArticleRemoteDataSourceMock.swift in Sources */,
+				224B039F250B684B006CB0C5 /* GetArticlesSpec.swift in Sources */,
+				224B03A6250B6FBF006CB0C5 /* ArticleRepositoryMock.swift in Sources */,
+				224B03A4250B6F85006CB0C5 /* ArticleLocalDataSourceMock.swift in Sources */,
 				22E199552507D6B3001CC15A /* TechNewsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -681,7 +737,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -703,7 +759,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

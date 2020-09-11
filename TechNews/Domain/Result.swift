@@ -6,4 +6,4 @@
 //  Copyright © 2020 Giomar Rodriguez. All rights reserved.
 //
 
-import Foundation
+typealias Result<T> = Swift.Result<T, Error>

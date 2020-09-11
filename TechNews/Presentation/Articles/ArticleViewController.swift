@@ -21,6 +21,17 @@ class ArticleViewController: UIViewController {
     webView.backgroundColor = .clear
     return webView
   }()
+  
+  lazy var progressView: UIProgressView = {
+    let view = UIProgressView(progressViewStyle: .bar)
+    view.progress = 0.0
+    view.alpha = 0
+    view.isHidden = true
+    view.tintColor = UIColor.systemBlue
+    view.trackTintColor = UIColor.systemGray3
+    return view
+  }()
+
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -44,16 +55,16 @@ extension ArticleViewController: ArticleView {
 
 extension ArticleViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-      //hideProgress()
+      hideProgress()
     }
 
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-      //showProgress()
+      showProgress()
     }
 
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
       if keyPath == "estimatedProgress" {
-        //progressView.setProgress(Float(webView.estimatedProgress), animated: true)
+        progressView.setProgress(Float(webView.estimatedProgress), animated: true)
       }
     }
 }
@@ -63,6 +74,7 @@ extension ArticleViewController: Renderizable {
   func render() {
     view.backgroundColor = UIColor.white
     setupWebView()
+    setupProgressView()
   }
   
   private func setupWebView() {
@@ -70,8 +82,35 @@ extension ArticleViewController: Renderizable {
     webView.snp.makeConstraints { make in
       make.leading.trailing.bottom.equalToSuperview()
       make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
-      //make.top.equalTo(barView.snp.bottom)
       make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
     }
   }
+  
+  func setupProgressView() {
+    view.addSubview(progressView)
+    progressView.snp.makeConstraints { make in
+        make.leading.trailing.equalToSuperview()
+        make.top.equalTo(webView.snp.top)
+    }
+  }
+  
+  private func showProgress() {
+    progressView.isHidden = false
+    UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {
+      self.progressView.alpha = 1
+    }, completion: { _ in
+      self.progressView.setProgress(0.1, animated: true)
+    })
+  }
+
+  private func hideProgress() {
+    progressView.setProgress(1, animated: true)
+    UIView.animate(withDuration: 0.5, delay: 0.3, options: [], animations: {
+      self.progressView.alpha = 0
+    }, completion: { _ in
+      self.progressView.isHidden = true
+      self.progressView.setProgress(0.0, animated: false)
+    })
+  }
+
 }

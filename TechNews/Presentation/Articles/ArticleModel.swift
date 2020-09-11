@@ -6,4 +6,10 @@
 //  Copyright © 2020 Giomar Rodriguez. All rights reserved.
 //
 
-import Foundation
+struct ArticleModel {
+  var id: String
+  var title: String
+  var description: String
+  var url: String
+  var showed: Bool = false
+}

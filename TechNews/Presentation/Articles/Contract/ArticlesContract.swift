@@ -8,11 +8,12 @@
 
 protocol ArticlesPresenter: BasePresenter {
   func fetchArticles()
-  func openArticle(_ article: Article)
+  func deleteArticle(_ article: ArticleModel)
+  func openArticle(_ article: ArticleModel)
 }
 
 protocol ArticlesView: BaseView {
-  func present(articles: [Article])
+  func present(articles: [ArticleModel])
   func navigateTo(article: ArticleViewController)
 }
 

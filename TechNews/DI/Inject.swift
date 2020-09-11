@@ -26,6 +26,7 @@ class Inject {
           factoryComponents()
           return DefaultArticlesPresenter(view: articlesView,
                                           getArticlesUseCase: container.resolve(GetArticlesUseCase.self)!,
+                                          deleteArticleUseCase: container.resolve(DeleteArticlesUseCase.self)!,
                                           articleFactory: container.resolve(ArticleFactory.self)!)
         }
       case .article:
@@ -47,10 +48,12 @@ class Inject {
   }
   
   private func articleComponents() {
+    container.autoregister(Configuration.self, initializer: TechNewsConfiguration.init).inObjectScope(.container)
     container.autoregister(ArticleLocalDataSource.self, initializer: UserDefaultArticleDataSource.init).inObjectScope(.container)
     container.autoregister(ArticleRemoteDataSource.self, initializer: URLSessionArticleDataSource.init).inObjectScope(.container)
     container.autoregister(ArticleRepository.self, initializer: DefaultArticleRepository.init).inObjectScope(.container)
-    container.autoregister(GetArticlesUseCase.self, initializer: DefaultGetArticlesUseCase.init).inObjectScope(.graph)
+    container.autoregister(GetArticlesUseCase.self, initializer: DefaultGetArticlesUseCase.init).inObjectScope(.container)
+    container.autoregister(DeleteArticlesUseCase.self, initializer: DefaultDeleteArticlesUseCase.init).inObjectScope(.container)
   }
 }
 

@@ -11,12 +11,19 @@ import SnapKit
 
 class ArticlesViewController: UIViewController {
 
-  private var data: [Article] = []
+  private var data: [ArticleModel] = []
   
   public var presenter: ArticlesPresenter?
   
+  lazy var refreshControl: UIRefreshControl = {
+    let refreshControl = UIRefreshControl.init()
+    refreshControl.addTarget(self, action: #selector(fetchArticles), for: .valueChanged)
+    return refreshControl
+  }()
+  
   lazy var tableView: UITableView = {
     let tableView = UITableView(frame: .zero)
+    tableView.insertSubview(refreshControl, at: 0)
     tableView.register(ArticleTableViewCell.self)
     tableView.dataSource = self
     tableView.delegate = self
@@ -27,23 +34,30 @@ class ArticlesViewController: UIViewController {
     super.viewDidLoad()
     render()
     
-    guard let presenter = presenter else {
+    guard let _ = presenter else {
       fatalError("Expected of type \(String(describing: ArticlesPresenter.self))")
     }
 
-    presenter.fetchArticles()
+    fetchArticles()
   }
   
-  private func open(article: Article) {
+  @objc func fetchArticles() {
+      presenter?.fetchArticles()
+  }
+  
+  private func open(article: ArticleModel) {
     presenter?.openArticle(article)
   }
 }
 
 extension ArticlesViewController: ArticlesView {
-  func present(articles: [Article]) {
-    data = articles
+  func present(articles: [ArticleModel]) {
     DispatchQueue.main.async { [weak self] in
       guard let self = self else { return }
+      
+      self.data = articles
+      self.refreshControl.perform(#selector(self.refreshControl.endRefreshing),
+                             with: nil, afterDelay: 0.2)
       self.tableView.reloadData()
     }
   }
@@ -63,7 +77,7 @@ extension ArticlesViewController: UITableViewDelegate, UITableViewDataSource {
     let cell = tableView.reusableCell(for: indexPath) as ArticleTableViewCell
     cell.selectionStyle = .none
     cell.titlelabel.text = data[indexPath.item].title
-    cell.descriptionLabel.text = data[indexPath.item].author
+    cell.descriptionLabel.text = data[indexPath.item].description
     return cell
   }
   
@@ -89,6 +103,7 @@ extension ArticlesViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     if editingStyle == .delete {
+      presenter?.deleteArticle(data[indexPath.item])
       data.remove(at: indexPath.item)
       tableView.deleteRows(at: [indexPath], with: .fade)
     }
@@ -98,6 +113,7 @@ extension ArticlesViewController: UITableViewDelegate, UITableViewDataSource {
 extension ArticlesViewController: Renderizable {
   
   func render() {
+    title = "Tech News"
     view.backgroundColor = UIColor.white
     setupTableView()
   }

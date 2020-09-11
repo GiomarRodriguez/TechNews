@@ -6,4 +6,12 @@
 //  Copyright © 2020 Giomar Rodriguez. All rights reserved.
 //
 
-import Foundation
+protocol Configuration {
+  func scheme() -> String
+  func host() -> String
+  func path(type: PathType) -> String
+}
+
+enum PathType {
+  case search
+}

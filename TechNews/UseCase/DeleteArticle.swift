@@ -6,4 +6,19 @@
 //  Copyright © 2020 Giomar Rodriguez. All rights reserved.
 //
 
-import Foundation
+protocol DeleteArticlesUseCase {
+  func deleteArticle(_ article: ArticleModel)
+}
+
+class DefaultDeleteArticlesUseCase: DeleteArticlesUseCase {
+  
+  var articles: ArticleRepository
+  
+  init(articles: ArticleRepository) {
+    self.articles = articles
+  }
+
+  func deleteArticle(_ article: ArticleModel) {
+    articles.delete(articleId: article.id)
+  }
+}

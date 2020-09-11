@@ -8,9 +8,9 @@
 
 protocol ArticleRepository {
   
-  func all(completion: @escaping ([Article]) -> Void)
+  func all(completion: @escaping (Result<[Article]>) -> Void)
   func stored() -> [Article]
   func save(articles: [Article])
-  func delete(article: Article)
+  func delete(articleId: String)
   func deletedIds() -> [String]
 }

@@ -6,4 +6,20 @@
 //  Copyright © 2020 Giomar Rodriguez. All rights reserved.
 //
 
-import Foundation
+class TechNewsConfiguration: Configuration {
+  
+  func scheme() -> String {
+    return "https"
+  }
+  
+  func host() -> String {
+    return "hn.algolia.com"
+  }
+  
+  func path(type: PathType) -> String {
+    switch type {
+      case .search:
+      return "/api/v1/search_by_date"
+    }
+  }
+}

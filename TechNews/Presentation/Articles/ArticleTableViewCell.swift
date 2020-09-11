@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArticleTableViewCell: UITableViewCell, Reducible {
+class ArticleTableViewCell: UITableViewCell, Reducible, Movable {
 
   lazy var titlelabel: UILabel = {
     let label = UILabel(frame: .zero)
@@ -20,7 +20,7 @@ class ArticleTableViewCell: UITableViewCell, Reducible {
   
   lazy var descriptionLabel: UILabel = {
     let label = UILabel(frame: .zero)
-    label.font = UIFont.systemFont(ofSize: 18)
+    label.font = UIFont.systemFont(ofSize: 16)
     label.textColor = UIColor.secondaryLabel
     label.numberOfLines = 1
     return label

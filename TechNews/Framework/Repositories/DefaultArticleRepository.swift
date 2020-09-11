@@ -8,8 +8,8 @@
 
 class DefaultArticleRepository: ArticleRepository {
   
-  unowned let remote: ArticleRemoteDataSource
-  unowned let local: ArticleLocalDataSource
+  var remote: ArticleRemoteDataSource
+  var local: ArticleLocalDataSource
   
   init(remote: ArticleRemoteDataSource,
        local: ArticleLocalDataSource) {
@@ -17,10 +17,10 @@ class DefaultArticleRepository: ArticleRepository {
     self.local = local
   }
   
-  func all(completion: @escaping ([Article]) -> Void) {
-    remote.readAll { articles in
+  func all(completion: @escaping (Result<[Article]>) -> Void) {
+    remote.readAll { result in
       
-      completion(articles)
+      completion(result)
     }
   }
   
@@ -32,8 +32,8 @@ class DefaultArticleRepository: ArticleRepository {
     local.write(articles: articles)
   }
   
-  func delete(article: Article) {
-    local.delete(with: article.id)
+  func delete(articleId: String) {
+    local.delete(with: articleId)
   }
   
   func deletedIds() -> [String] {

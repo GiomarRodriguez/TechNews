@@ -36,7 +36,11 @@ class UserDefaultArticleDataSource: ArticleLocalDataSource {
   }
   
   func readDeletedIds() -> [String] {
-    guard let articleDeleted = userDefaults.value(forKey: articlesDeletedKey) as? [String] else { return [] }
+    guard let articleDeleted = userDefaults.value(forKey: articlesDeletedKey) as? [String] else {
+      let initValue: [String] = []
+      userDefaults.set(initValue, forKey: articlesDeletedKey)
+      return []
+    }
     
     return articleDeleted
   }
