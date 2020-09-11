@@ -1,3 +1,4 @@
+ <p align="center"> <img src="https://github.com/GiomarRodriguez/TechNews/blob/master/Git/Icon-1024.png" width="350"/> </p> 
 
 
 # TechNews
