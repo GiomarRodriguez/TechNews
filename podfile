@@ -1,0 +1,31 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+# Libraries group
+
+def di_pod
+	pod 'Swinject', '2.7.0'
+	pod 'SwinjectAutoregistration', '2.7.0'
+end
+
+def tests_pod
+	pod 'Quick'
+	pod 'Nimble'
+end
+
+def interface_pod
+	pod 'SnapKit'
+end
+
+
+# Target group
+
+target 'TechNews' do
+	interface_pod
+	di_pod
+end
+
+target 'TechNewsTests' do
+	tests_pod
+end
+

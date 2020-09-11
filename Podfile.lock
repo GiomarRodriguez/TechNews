@@ -1,0 +1,33 @@
+PODS:
+  - Nimble (8.1.2)
+  - Quick (3.0.0)
+  - SnapKit (5.0.1)
+  - Swinject (2.7.0)
+  - SwinjectAutoregistration (2.7.0):
+    - Swinject (~> 2.7)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick
+  - SnapKit
+  - Swinject (= 2.7.0)
+  - SwinjectAutoregistration (= 2.7.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Nimble
+    - Quick
+    - SnapKit
+    - Swinject
+    - SwinjectAutoregistration
+
+SPEC CHECKSUMS:
+  Nimble: 3864815b4703c7ebffba875973c70e854489fbae
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Swinject: 18195e17ad6140f994e95e11c7b04b21410598e8
+  SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
+
+PODFILE CHECKSUM: c0f598682d51d139c33951629646e15691558319
+
+COCOAPODS: 1.9.3
