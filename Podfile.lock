@@ -7,9 +7,9 @@ PODS:
     - Swinject (~> 2.7)
 
 DEPENDENCIES:
-  - Nimble
-  - Quick
-  - SnapKit
+  - Nimble (= 8.1.2)
+  - Quick (= 3.0.0)
+  - SnapKit (= 5.0.1)
   - Swinject (= 2.7.0)
   - SwinjectAutoregistration (= 2.7.0)
 
@@ -28,6 +28,6 @@ SPEC CHECKSUMS:
   Swinject: 18195e17ad6140f994e95e11c7b04b21410598e8
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: c0f598682d51d139c33951629646e15691558319
+PODFILE CHECKSUM: d94c653616734c984c0b4d4db3056960a489df6f
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0
