@@ -9,12 +9,12 @@ def di_pod
 end
 
 def tests_pod
-	pod 'Quick'
-	pod 'Nimble'
+	pod 'Quick', '3.0.0'
+	pod 'Nimble', '8.1.2'
 end
 
 def interface_pod
-	pod 'SnapKit'
+	pod 'SnapKit', '5.0.1'
 end
 
 
