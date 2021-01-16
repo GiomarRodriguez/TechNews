@@ -10,7 +10,7 @@ The app with the latest technology articles published
 * [Setup](#setup)
 
 ## General info
-This project will show the last articles about tecnology.
+This project will show the last articles about technology.
 The main view display the list of articles, when tap on an article the app show the detail inside a webview.
 Remove an article is so easly, just need to do a swipe on any article.
 To update the list, only swip down on the main view.
